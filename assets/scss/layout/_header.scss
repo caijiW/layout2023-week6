@@ -1,0 +1,79 @@
+header{
+  position: fixed;
+  width: 100%;
+  .logo{
+    @include size(40px,40px);
+    @include pad{
+      @include size(53px,53px);
+    }
+  } 
+
+  span{
+    display: none;
+    @include desktop{
+      display: block;
+    }
+  }
+
+  .input-search{
+    width: 168px;
+    @include pad{
+      width: 280px;
+    }
+    &:focus{
+      outline: 0;
+    }
+  }
+
+  .icon-search{
+    // @include size(39px,39px);
+    width: 39px;
+    @include pad{
+      // @include size(55px,55px);
+      width: 55px;
+    }
+  }
+
+  .member-list{
+    width: 100%;
+    display: block;
+    background-color: #000;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    // height: 200px;
+    height: 0;
+    overflow: hidden;
+    transition: .3s;
+    &.open{
+      top: 60px;
+      height: 200px;
+      overflow: unset;
+    }
+    @include pad{
+      position: unset;
+      overflow: unset;
+      height: unset;
+      background-color: unset;
+      display: unset;
+      width: unset;
+    }
+    a:hover{
+      color: #9C9E18;
+    }
+    li{
+      color: #fff;
+      @include pad{
+        color: $primary;
+      }
+    }
+  }
+
+
+  .menu-switch{
+    i{
+      font-size: 30px;
+    }
+  }
+}

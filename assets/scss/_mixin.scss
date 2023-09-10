@@ -1,0 +1,16 @@
+@mixin size($width,$height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin pad {
+    @media screen and (min-width:767px) {
+        @content
+    }
+};
+
+@mixin desktop {
+    @media screen and (min-width:991px) {
+        @content
+    }
+};

@@ -1,0 +1,26 @@
+body{
+    font-family: 'Yeseva One','Noto Sans TC', sans-serif;
+}
+
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+main{
+    padding-top: 72px;
+}

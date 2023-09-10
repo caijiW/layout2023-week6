@@ -1,0 +1,143 @@
+.banner{
+  height: 516px;
+}
+
+.category{
+  &-item{
+    @include size(40px,40px);
+    @include pad{
+      @include size(80px,80px);
+    }
+    
+  }
+  a:hover{
+    background-color: $secondary;
+    color: $primary;
+  }
+  .category-search{
+    background: $primary;
+  }
+
+}
+
+.activity-cards{
+  .card{
+    background-color: $backgroundColor;
+  }
+  .card-img{
+    height: 255px;
+
+  }
+
+  .card-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .activity-cardbody-icon{
+  @include size(24px,24px);
+}
+  .rounded-double-right{
+    @include size(16px,16px);
+  }
+  a{
+    display: none;
+    position: relative;
+    &:hover::after{
+      display: block;
+    }
+    &::after{
+    content:'';
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+    display: none;
+    @include size(29px,29px);
+    border-radius: 50%;
+    background-color: $secondary;
+    }
+
+  }
+}
+
+.chatGPT{
+  &-img{
+    height: 158px;
+    @include pad{
+      height: 317px;
+    }
+    
+  }
+
+  // &-tag{
+  //   border: solid 2px $primary;
+  //   position: relative;
+  //   &::before{
+  //     content: '';
+  //     position: absolute;
+  //     top: 0;
+  //     bottom: 0;
+  //     left: 0;
+  //     width: 5px;
+  //     background-color: $primary;
+  //   }
+  //   &:hover{
+  //     background-color: $primary;
+  //     color: #fff;
+  //   }
+  //   &:hover::before{
+  //     background-color: $secondary;
+  //   }
+  // }
+  // &-btn{
+  //   color: #fff;
+  //   &:hover{
+  //     color: $secondary
+  //   }
+  // }
+  // .rounded-double-right-white{
+  //   @include size(20px,20px);
+  // }
+
+}
+
+
+.marquee{
+  ul{
+    left: 0;
+    animation: marqueeMove 2s linear infinite alternate-reverse;
+  }
+}
+
+@keyframes marqueeMove{
+  0%{
+    left: 0;
+  }
+  100%{
+    left: -150px;
+  }
+}
+
+.marquee2{
+  ul{
+    animation: marqueeMove 2s linear -2s infinite alternate-reverse;
+  }
+}
+
+.activity-album{
+ 
+  &-item{
+    height: 274px;
+  }
+ .activity-sticker{
+  top: -10px;
+  left: 50%;
+
+ 
+ }
+
+}
+
